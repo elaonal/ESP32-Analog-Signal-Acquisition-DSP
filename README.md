@@ -2,6 +2,25 @@
 
 A mixed-signal electronics project by Ela Onal: design and characterise an analogue conditioning circuit, acquire its output with an ESP32 ADC, and evaluate embedded filtering and frequency recovery using Python.
 
+## Physical bench evidence
+
+<img src="results/bench-setup.png" alt="ESP32 breadboard, laptop and oscilloscope bench setup" width="520">
+
+Original bench setup. The laptop trace documents acquisition during bring-up; it is not a calibrated FFT or proof of distortion-free sampling.
+
+<img src="results/oscilloscope-5hz.png" alt="FNIRSI oscilloscope displaying 5.00 Hz" width="420">
+
+**5 Hz experiment:** the scope visibly reads **5.00 Hz**. The historical FFT result was approximately **4.97 Hz**, but the **raw 5 Hz dataset is unavailable**, so that FFT cannot currently be reproduced. The photograph establishes the displayed scope reading, not the FFT result. The committed 10 Hz dataset remains the reproducible frequency-analysis evidence.
+
+<details>
+<summary>Circuit and probing close-up</summary>
+
+<img src="results/circuit-probing.png" alt="ESP32 conditioning circuit with oscilloscope probe" width="520">
+
+Original photograph of physical construction and probing. Use the documentation schematic and signal chain below for the intended functional topology; the photograph does not establish every connection or component value.
+
+</details>
+
 ## Documentation schematic
 
 ```text
@@ -110,3 +129,4 @@ It writes fft_spectrum.png and displays the plot. Copy only when no existing fft
 - [data](data): committed measurements.
 - [results](results): filtering and FFT plots.
 - [requirements.txt](requirements.txt): Python dependencies.
+
