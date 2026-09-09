@@ -1,6 +1,8 @@
 # ESP32 Analog Signal Acquisition & DSP System
 
-A mixed-signal electronics project by Ela Onal: design and characterise an analogue conditioning circuit, acquire its output with an ESP32 ADC, and evaluate embedded filtering and ## Documentation schematic
+A mixed-signal electronics project by Ela Onal: design and characterise an analogue conditioning circuit, acquire its output with an ESP32 ADC, and evaluate embedded filtering and frequency recovery using Python.
+
+## Documentation schematic
 
 ```text
 Generator ── C_AC ── [bias stage: ~1.64 V DC] ── 10 kΩ ──●── GPIO34 ADC
@@ -12,7 +14,6 @@ Generator ── C_AC ── [bias stage: ~1.64 V DC] ── 10 kΩ ──●─
 
 Documentation schematic derived from the circuit values and signal chain documented below; **not a native EDA design or verified wiring drawing**. AC-coupling capacitance and detailed bias-network connections are unspecified in the available documentation. The RC section depicts the first-order low-pass topology for the documented 10 kΩ / 1 µF values, giving a calculated cutoff of approximately 15.9 Hz. Source and load impedances can affect the realised response.
 
-frequency recovery using Python.
 
 ## Results and evidence
 
